@@ -17,98 +17,85 @@ var nameRestaurant;
 var searchURL;
 var restaurants = [];
 var restaurant;
-var testQuand = 0;
 
-function handle(callback){
-	browseArray(array1, 1);
-	browseArray(array2, 2);
-	browseArray(array3, 3);
-	setTimeout(function(){
-		callback(createJSONfile)
-	}, 5000);
-}
+module.exports = function lafourchette(){
 
-function browseArray(array, stars){
-	testQuand++;
-	console.log('browseArray :' + testQuand);
-	for(i = 0; i < array.length; i++){
-		nameRestaurant = array[i];
-		getId(nameRestaurant, stars, getDeal);
-	}; 
-}
+	function handle(callback){
+		browseArray(array1, 1);
+		browseArray(array2, 2);
+		browseArray(array3, 3);
+		setTimeout(function(){
+			callback(createJSONfile)
+		}, 5000);
+	}
 
-function getId(nameRestaurant, stars, callback){
-	var idRestaurant = 0;
-	testQuand++;
-	console.log('getId :' + testQuand);
+	function browseArray(array, stars){
+		for(i = 0; i < array.length; i++){
+			nameRestaurant = array[i];
+			getId(nameRestaurant, stars, getDeal);
+		}; 
+	}
 
-	searchURL = encodeURIComponent(nameRestaurant);
-	request.get(urlID + searchURL, (error, response, body) => {
-	    let jsonID = JSON.parse(body);
-	    var test = `${jsonID[0]}`;
+	function getId(nameRestaurant, stars, callback){
+		searchURL = encodeURIComponent(nameRestaurant);
+		request.get(urlID + searchURL, (error, response, body) => {
+		    let jsonID = JSON.parse(body);
+		    var test = `${jsonID[0]}`;
 
-		if(test != "undefined"){
-			for(index = 0; index < jsonID.length; index++){
-				if(`${jsonID[index].address.address_locality}` === "Paris"){
-					idRestaurant = `${jsonID[index].id}`;
-					break;    
-				}
-			}
-		}
-		callback(nameRestaurant, idRestaurant, stars, createRestaurant);
-	});
-}
-	
-function getDeal(nameRestaurant, idRestaurant, stars, callback){
-	testQuand++;
-	console.log('getDeal :' + testQuand);
-
-	if(idRestaurant != 0){
-		var urlDeal = "https://m.lafourchette.com/api/restaurant/" + idRestaurant + "/sale-type";
-		var first = true;
-		request.get(urlDeal, (error, response, body) => {
-			let jsonDeal = JSON.parse(body);
-			for(j = 0; j < jsonDeal.length; j++){
-				if(`${jsonDeal[j].is_special_offer}` === "true"){
-					if(first === true){
-						restaurant = {
-							"name": nameRestaurant,
-							"michelin star(s)": stars,
-							deals: []
-						};
-						first = false;
+			if(test != "undefined"){
+				for(index = 0; index < jsonID.length; index++){
+					if(`${jsonID[index].address.address_locality}` === "Paris"){
+						idRestaurant = `${jsonID[index].id}`;
+						break;    
 					}
-					var deal = `${jsonDeal[j].title}`
-					restaurant.deals.push(deal);
 				}
 			}
-			if(first === false){
-				callback(restaurant);
-			}
+			callback(nameRestaurant, idRestaurant, stars, createRestaurant);
 		});
 	}
-}
+		
+	function getDeal(nameRestaurant, idRestaurant, stars, callback){
+		if(idRestaurant != 0){
+			var urlDeal = "https://m.lafourchette.com/api/restaurant/" + idRestaurant + "/sale-type";
+			var first = true;
+			request.get(urlDeal, (error, response, body) => {
+				let jsonDeal = JSON.parse(body);
+				for(j = 0; j < jsonDeal.length; j++){
+					if(`${jsonDeal[j].is_special_offer}` === "true"){
+						if(first === true){
+							restaurant = {
+								"name": nameRestaurant,
+								"michelin star(s)": stars,
+								deals: []
+							};
+							first = false;
+						}
+						var deal = `${jsonDeal[j].title}`
+						restaurant.deals.push(deal);
+					}
+				}
+				if(first === false){
+					callback(restaurant);
+				}
+			});
+		}
+	}
 
-function createRestaurant(restaurantTest){
-	testQuand++;
-	console.log('createRestaurant :' + testQuand);
-	restaurants.push(restaurantTest);
-}
+	function createRestaurant(restaurantTest){
+		restaurants.push(restaurantTest);
+	}
 
-function createString(callback){
-	testQuand++;
-	console.log('createString :' + testQuand);
-	var jstr = JSON.stringify(restaurants, restaurant, "\t");
-	callback(jstr);
-}
+	function createString(callback){
+		var jstr = JSON.stringify(restaurants, restaurant, "\t");
+		callback(jstr);
+	}
 
-function createJSONfile(jstr){
-	testQuand++;
-	console.log('createJSONfile :' + testQuand);
-	fs.appendFileSync('jstr.json', jstr);
-}
+	function createJSONfile(jstr){
+		fs.appendFileSync('./modules/jstr.json', jstr);
+	}
 
-handle(createString);
+	handle(createString);
+}
 
 				
 				
