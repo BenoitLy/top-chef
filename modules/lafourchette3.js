@@ -1,6 +1,7 @@
 var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
+var async = require('async');
 
 var buffer1 = fs.readFileSync('./restaurants-1-etoiles-michelin.txt');
 var text1 = buffer1.toString();
@@ -19,47 +20,38 @@ var restaurants = [];
 var restaurant;
 var testQuand = 0;
 
-function handle(callback){
-	browseArray(array1, 1);
-	browseArray(array2, 2);
-	browseArray(array3, 3);
-	setTimeout(function(){
-		callback(createJSONfile)
-	}, 5000);
+handle();
+
+function handle() {
+  var arr = [...array1, ...array2, ...array3]
+  async.each(arr, getId, function finished() {
+  	console.log("ENDED");
+  });
 }
 
-function browseArray(array, stars){
-	testQuand++;
-	console.log('browseArray :' + testQuand);
-	for(i = 0; i < array.length; i++){
-		nameRestaurant = array[i];
-		getId(nameRestaurant, stars, getDeal);
-	}; 
-}
-
-function getId(nameRestaurant, stars, callback){
+function getId(nameRestaurant, callback) {
 	var idRestaurant = 0;
 	testQuand++;
 	console.log('getId :' + testQuand);
 
 	searchURL = encodeURIComponent(nameRestaurant);
-	request.get(urlID + searchURL, (error, response, body) => {
+	request.get(urlID + "Au Palais Royal", (error, response, body) => {
 	    let jsonID = JSON.parse(body);
 	    var test = `${jsonID[0]}`;
 
 		if(test != "undefined"){
-			for(index = 0; index < jsonID.length; index++){
+			for(index = 0; index < jsonID.length; index++) {
 				if(`${jsonID[index].address.address_locality}` === "Paris"){
 					idRestaurant = `${jsonID[index].id}`;
 					break;    
 				}
 			}
 		}
-		callback(nameRestaurant, idRestaurant, stars, createRestaurant);
+		getDeal(nameRestaurant, idRestaurant, callback);
 	});
 }
 	
-function getDeal(nameRestaurant, idRestaurant, stars, callback){
+function getDeal(nameRestaurant, idRestaurant, callback) {
 	testQuand++;
 	console.log('getDeal :' + testQuand);
 
@@ -73,7 +65,7 @@ function getDeal(nameRestaurant, idRestaurant, stars, callback){
 					if(first === true){
 						restaurant = {
 							"name": nameRestaurant,
-							"michelin star(s)": stars,
+							"michelin star(s)": 1,
 							deals: []
 						};
 						first = false;
@@ -82,33 +74,34 @@ function getDeal(nameRestaurant, idRestaurant, stars, callback){
 					restaurant.deals.push(deal);
 				}
 			}
-			if(first === false){
-				callback(restaurant);
+			if(first === false) {
+				createRestaurant(restaurant);
+        callback();
 			}
 		});
 	}
 }
 
-function createRestaurant(restaurantTest){
+function createRestaurant(restaurantTest) {
 	testQuand++;
 	console.log('createRestaurant :' + testQuand);
 	restaurants.push(restaurantTest);
 }
 
-function createString(callback){
+function createString(callback) {
 	testQuand++;
 	console.log('createString :' + testQuand);
 	var jstr = JSON.stringify(restaurants, restaurant, "\t");
 	callback(jstr);
 }
 
-function createJSONfile(jstr){
+function createJSONFile(jstr) {
 	testQuand++;
 	console.log('createJSONfile :' + testQuand);
 	fs.appendFileSync('jstr.json', jstr);
 }
 
-handle(createString);
+
 
 				
 				
