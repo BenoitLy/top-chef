@@ -1,29 +1,20 @@
 [
 	{
-		"name": "Le Restaurant",
+		"name": "Penati al Baretto",
 		"michelin star(s)": 1,
 		"deals": [
-			"-30% off the \"à la carte\" menu!"
-		]
-	},
-	{
-		"name": "Armani Ristorante",
-		"michelin star(s)": 1,
-		"deals": [
-			"Prestige Menu 79€"
-		]
-	},
-	{
-		"name": "La Scène Thélème",
-		"michelin star(s)": 1,
-		"deals": [
-			"-50% off the \"à la carte\" menu!",
-			"-30% off the \"à la carte\" menu!",
 			"-20% off the \"à la carte\" menu!"
 		]
 	},
 	{
-		"name": "Penati al Baretto",
+		"name": "L'Arôme",
+		"michelin star(s)": 1,
+		"deals": [
+			"Menu Mardis Gourmands 139€"
+		]
+	},
+	{
+		"name": "Yam'Tcha",
 		"michelin star(s)": 1,
 		"deals": [
 			"-20% off the \"à la carte\" menu!"
@@ -37,128 +28,10 @@
 		]
 	},
 	{
-		"name": "Le Violon d'Ingres",
+		"name": "Armani Ristorante",
 		"michelin star(s)": 1,
 		"deals": [
-			"Menu \"Prestige\""
-		]
-	},
-	{
-		"name": "Le Chiberta",
-		"michelin star(s)": 1,
-		"deals": [
-			"Menu Découverte 110€"
-		]
-	},
-	{
-		"name": "Le Baudelaire",
-		"michelin star(s)": 1,
-		"deals": [
-			"-20% off the \"à la carte\" menu!",
-			"Menu Gourmands 130€"
-		]
-	},
-	{
-		"name": "Benoit",
-		"michelin star(s)": 1,
-		"deals": [
-			"Menu Mardis Gourmands 125€"
-		]
-	},
-	{
-		"name": "La Grande Cascade",
-		"michelin star(s)": 1,
-		"deals": [
-			"-40% off the \"à la carte\" menu"
-		]
-	},
-	{
-		"name": "L'Arôme",
-		"michelin star(s)": 1,
-		"deals": [
-			"Menu Mardis Gourmands 139€"
-		]
-	},
-	{
-		"name": "Maison Rostang",
-		"michelin star(s)": 2,
-		"deals": [
-			"Menu Prestige 115€ Tout Compris, le midi !",
-			"Menu Prestige 195€ Tout Compris, le soir !"
-		]
-	},
-	{
-		"name": "ES",
-		"michelin star(s)": 1,
-		"deals": [
-			"-20% off the \"à la carte\" menu!"
-		]
-	},
-	{
-		"name": "Laurent",
-		"michelin star(s)": 1,
-		"deals": [
-			"-30% off the \"à la carte\" menu!",
-			"-20% off the \"à la carte\" menu!"
-		]
-	},
-	{
-		"name": "Lasserre",
-		"michelin star(s)": 1,
-		"deals": [
-			"Menu Mardis Gourmands 150€"
-		]
-	},
-	{
-		"name": "Le Meurice Alain Ducasse",
-		"michelin star(s)": 2,
-		"deals": [
-			"Menu Prestige 225€"
-		]
-	},
-	{
-		"name": "La Fourchette du Printemps",
-		"michelin star(s)": 1,
-		"deals": [
-			"Menu Gourmands 79€"
-		]
-	},
-	{
-		"name": "Yam'Tcha",
-		"michelin star(s)": 1,
-		"deals": [
-			"-20% off the \"à la carte\" menu!"
-		]
-	},
-	{
-		"name": "Guy Savoy",
-		"michelin star(s)": 3,
-		"deals": [
-			"Menu Découverte 110€"
-		]
-	},
-	{
-		"name": "Sushi B",
-		"michelin star(s)": 1,
-		"deals": [
-			"-50% off the \"à la carte\" menu!",
-			"-30% off the \"à la carte\" menu!"
-		]
-	},
-	{
-		"name": "La Scène",
-		"michelin star(s)": 1,
-		"deals": [
-			"-50% off the \"à la carte\" menu!",
-			"-30% off the \"à la carte\" menu!",
-			"-20% off the \"à la carte\" menu!"
-		]
-	},
-	{
-		"name": "Antoine",
-		"michelin star(s)": 1,
-		"deals": [
-			"Menu Mardis Gourmands 109€"
+			"Prestige Menu 79€"
 		]
 	},
 	{
@@ -173,6 +46,133 @@
 		"michelin star(s)": 1,
 		"deals": [
 			"Menu lunch prestige 90€ tout compris"
+		]
+	},
+	{
+		"name": "La Fourchette du Printemps",
+		"michelin star(s)": 1,
+		"deals": [
+			"Menu Gourmands 79€"
+		]
+	},
+	{
+		"name": "ES",
+		"michelin star(s)": 1,
+		"deals": [
+			"-20% off the \"à la carte\" menu!"
+		]
+	},
+	{
+		"name": "Le Meurice Alain Ducasse",
+		"michelin star(s)": 2,
+		"deals": [
+			"Menu Prestige 225€"
+		]
+	},
+	{
+		"name": "La Grande Cascade",
+		"michelin star(s)": 1,
+		"deals": [
+			"-40% off the \"à la carte\" menu"
+		]
+	},
+	{
+		"name": "Laurent",
+		"michelin star(s)": 1,
+		"deals": [
+			"-30% off the \"à la carte\" menu!",
+			"-20% off the \"à la carte\" menu!"
+		]
+	},
+	{
+		"name": "Le Chiberta",
+		"michelin star(s)": 1,
+		"deals": [
+			"Menu Découverte 110€"
+		]
+	},
+	{
+		"name": "Le Restaurant",
+		"michelin star(s)": 1,
+		"deals": [
+			"-30% off the \"à la carte\" menu!"
+		]
+	},
+	{
+		"name": "La Scène Thélème",
+		"michelin star(s)": 1,
+		"deals": [
+			"-50% off the \"à la carte\" menu!",
+			"-30% off the \"à la carte\" menu!",
+			"-20% off the \"à la carte\" menu!"
+		]
+	},
+	{
+		"name": "Lasserre",
+		"michelin star(s)": 1,
+		"deals": [
+			"Menu Mardis Gourmands 150€"
+		]
+	},
+	{
+		"name": "Sushi B",
+		"michelin star(s)": 1,
+		"deals": [
+			"-50% off the \"à la carte\" menu!",
+			"-30% off the \"à la carte\" menu!"
+		]
+	},
+	{
+		"name": "Antoine",
+		"michelin star(s)": 1,
+		"deals": [
+			"Menu Mardis Gourmands 109€"
+		]
+	},
+	{
+		"name": "Le Baudelaire",
+		"michelin star(s)": 1,
+		"deals": [
+			"-20% off the \"à la carte\" menu!",
+			"Menu Gourmands 130€"
+		]
+	},
+	{
+		"name": "Maison Rostang",
+		"michelin star(s)": 2,
+		"deals": [
+			"Menu Prestige 115€ Tout Compris, le midi !",
+			"Menu Prestige 195€ Tout Compris, le soir !"
+		]
+	},
+	{
+		"name": "Guy Savoy",
+		"michelin star(s)": 3,
+		"deals": [
+			"Menu Découverte 110€"
+		]
+	},
+	{
+		"name": "Benoit",
+		"michelin star(s)": 1,
+		"deals": [
+			"Menu Mardis Gourmands 125€"
+		]
+	},
+	{
+		"name": "La Scène",
+		"michelin star(s)": 1,
+		"deals": [
+			"-50% off the \"à la carte\" menu!",
+			"-30% off the \"à la carte\" menu!",
+			"-20% off the \"à la carte\" menu!"
+		]
+	},
+	{
+		"name": "Le Violon d'Ingres",
+		"michelin star(s)": 1,
+		"deals": [
+			"Menu \"Prestige\""
 		]
 	}
 ]

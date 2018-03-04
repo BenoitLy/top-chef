@@ -1,39 +1,3 @@
-Agapé
-Le 39V
-Restaurant du Palais Royal
-Le Restaurant
-Le Violon d'Ingres
-Les Tablettes de Jean-Louis Nomicos
-Le Quinzième - Cyril Lignac
-Le Chiberta
-Au Trou Gascon
-Dominique Bouchet
-La Dame de Pic
-Il Carpaccio
-Auguste
-Le Pergolèse
-Loiseau rive Gauche
-Le Baudelaire
-Benoit
-La Grande Cascade
-Helen
-La Scène
-L'Arcane
-Lucas Carton
-Lasserre
-Shang Palace
-Frédéric Simonin
-Mavrommatis
-La Scène Thélème
-Pur' - Jean-François Rouquette
-Neige d'Été
-Hélène Darroze
-Antoine
-Cobéa
-Alliance
-Les Jardins de l'Espadon
-L'Orangerie
-Armani Ristorante
 Nakatani
 L'Écrin
 L'Archeste
@@ -52,13 +16,24 @@ Le George
 L'Atelier de Joël Robuchon - Étoile
 Ze Kitchen Galerie
 Septime
-Akrame
-Restaurant H
-Sushi B
-Divellec
-Montée
-Comice
-Quinsou
+Helen
+La Scène
+L'Arcane
+Lucas Carton
+Lasserre
+Shang Palace
+Frédéric Simonin
+Mavrommatis
+La Scène Thélème
+Pur' - Jean-François Rouquette
+Neige d'Été
+Hélène Darroze
+Antoine
+Cobéa
+Alliance
+Les Jardins de l'Espadon
+L'Orangerie
+Armani Ristorante
 La Table d'Eugène
 David Toutain
 Tour d'Argent
@@ -77,3 +52,28 @@ Garance
 Pertinence
 Le Chateaubriand
 Ken Kawasaki
+Agapé
+Le 39V
+Restaurant du Palais Royal
+Le Restaurant
+Le Violon d'Ingres
+Les Tablettes de Jean-Louis Nomicos
+Le Quinzième - Cyril Lignac
+Le Chiberta
+Au Trou Gascon
+Dominique Bouchet
+La Dame de Pic
+Il Carpaccio
+Auguste
+Le Pergolèse
+Loiseau rive Gauche
+Le Baudelaire
+Benoit
+La Grande Cascade
+Akrame
+Restaurant H
+Sushi B
+Divellec
+Montée
+Comice
+Quinsou

@@ -37,6 +37,8 @@ module.exports = function lafourchette(){
 	}
 
 	function getId(nameRestaurant, stars, callback){
+		var idRestaurant = 0;
+		
 		searchURL = encodeURIComponent(nameRestaurant);
 		request.get(urlID + searchURL, (error, response, body) => {
 		    let jsonID = JSON.parse(body);
